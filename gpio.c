@@ -10,14 +10,16 @@
 #define di2 23
 #define di3 61
 
-#define do_En 65
+#define do_En 65//enable digital output pins
 #define do0 44
 #define do1 45
 #define do2 46
 #define do3 47
+//push button definition
 #define btn0 68//push button 1 on IGT-20
 #define btn1 67//push button2 on IGT-20
-#define led0 0//built in LED in IGT-20
+/*define the built in GPIO in IGT-20*/
+#define led0 0
 #define led1 1
 #define led2 2
 #define led3 3
@@ -79,7 +81,7 @@ int main()
 {
 	gpio_write(do_En,0);//enable the read/write in GPIO by writing 0 to pin 65
 	gpio_write(do0,1);//write 0 to digital output 1 (Do0)
-	led_wr(led5,1);
+	led_wr(led5,1);//write 1 to LED5 so that it glows
 	printf("WelCome To Neousys Technology\n");
 	while(1){
 	
